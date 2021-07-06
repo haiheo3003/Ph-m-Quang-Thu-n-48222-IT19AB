@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<div class="container">
+    <h1>Kiểm tra số hoàn hảo</h1>
+
+    <p>Nhập số nguyên n</p>
+
+    <input type="number" id="songuyen">
+
+    <button id="btn" onclick=kiem_tra_so_hh()>Check</button>
+
+    <div id="result"></div>
+
+</div>
+<script>
+    var songuyen = document.getElementById("songuyen");
+
+    function kiem_tra_so_hh() {
+        var N = songuyen.value;
+        var S = 0;
+        for (var i = 1; i < N; i++) {
+            if (N % i == 0)
+                S += i; // S = S + i                  
+        }
+
+        if (S == N) {
+            alert(N + " là số hoàn hảo");
+        } else {
+            alert(N + " không là số hoàn hảo");
+        }
+
+    }
+</script>
+
+</html>

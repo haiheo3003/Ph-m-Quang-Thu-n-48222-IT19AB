@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1>05. Viết chương trình nhập số nguyên dương a và kiểm tra a có phải là số tự đối xứng không?</h1>
+<h2>Ví dụ: 5, 232, 5775 tự đối xứng, nhưng 2342 thì không tự đối xứng</h2>
+
+<body>
+    <script>
+        console.log("Xin chào các bạn.");
+        console.log("Chạy chương trình kiểm tra số 7074707 có phải là số đối xứng")
+
+        var number = 7074707;
+        var nb = number;
+        var numberDoiXung = 0;
+
+        while (nb > 0) {
+            numberDoiXung = numberDoiXung * 10 + nb % 10;
+            nb = Math.floor(nb / 10);
+        }
+
+        console.log("Number: " + number);
+        console.log("Number đối xứng: " + numberDoiXung);
+        if (numberDoiXung === number) console.log("là số đối xứng");
+        else {
+            console.log("Không phải số đối xứng");
+        }
+    </script>
+</body>
+
+</html>

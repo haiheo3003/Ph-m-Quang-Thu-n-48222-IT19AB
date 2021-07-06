@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="page">
+        <h1 style="text-align: center;">KIỂM TRA SỐ NGUYÊN TỐ</h1>
+        <p>Nhập số cần kiểm tra: </p>
+        <input type="number" id="Test"><br>
+        <button class="bth" onclick="Test_SNT()">Kiểm tra</button>
+    </div>
+    <style>
+        .page {
+            width: 600px;
+            height: 300px;
+            background-color: pink;
+            margin: auto;
+        }
+        
+        p {
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            margin-left: 15px;
+        }
+        
+        .box {
+            background-color: cadetblue;
+            border: none;
+            text-align: center;
+            font-size: 15px;
+            display: inline-block;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-left: 150px;
+            color: black;
+        }
+        
+        input {
+            width: 80%;
+            height: 40px;
+            margin-left: 50px;
+            border-radius: 10px;
+            display: block;
+            border: none;
+            font-size: 20px;
+        }
+        
+        button {
+            margin: auto;
+            width: 100px;
+            background-color: chartreuse;
+            font-size: 20px;
+            text-align: center;
+            margin-left: 250px;
+        }
+    </style>
+</body>
+<script>
+    function Test_SNT(n) {
+        var n = document.getElementById('Test').value;
+        var test = true;
+        if (n < 2) {
+            test = false;
+        } else {
+            for (var i = 2; i < n - 1; i++) {
+                if (n % i == 0) {
+                    test = false;
+                    break;
+                }
+            }
+        }
+        if (test == true) {
+            alert(n + " Là số nguyên tố");
+        } else {
+            alert(n + " Không phải là số nguyên tố");
+        }
+    }
+</script>
+
+
+</html>
